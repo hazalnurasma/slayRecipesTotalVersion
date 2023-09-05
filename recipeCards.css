@@ -1,0 +1,394 @@
+/* i can use this in the content */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+/* same with my logo */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap'); 
+
+
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p{
+    margin:0;
+    padding:0;
+    outline: none;
+    border: none;
+}
+
+/* NAVBAR */
+
+.logo {
+    width: 15%;
+    height: 15%;
+} 
+
+.container{
+    background-image: url(./images/Home.png);
+    border-radius: 55px;
+    max-width: 1360px; 
+    /* notes by hazal: it changes with your browsers width */
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+
+.header{
+    background-image: url(./images/home.png);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    /* notes by hazal: It is a pesponsive desing. 100vh means pick the browser height. */
+}
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-family: 'League Spartan', sans-serif;
+    /* backdrop-filter: blur(10px);
+    backdrop-filter: brightness(95%);
+    backdrop-filter: drop-shadow(100% 100px 10px blue);
+    border-radius: 30px; */
+}
+
+.header-menu{
+    display: flex;
+}
+
+ul{
+    display: flex; 
+    font-family: 'League Spartan', sans-serif;
+    margin: 15px 25px 15px;
+}
+
+li{
+    margin-left: 27px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size:23px;
+    /* padding: 10px 0 10px 0; */
+}
+
+/* MENU ICON */
+
+#menu-icon{
+    width: 6%;
+    height: 6%;
+    display: none;
+    position: absolute;
+    /* right: 0; */
+    margin-left: -50px;
+}
+
+/* MENU RESPONSIVE */
+
+@media only screen and (max-width:800px){
+    .header-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top:100px;
+        left:-24px;
+        background-color: #e28651d3;
+        width: 100%;
+        height: 50%;
+        z-index:1;
+        overflow: hidden;
+        transition: max-height .6s;
+        font-family: 'League Spartan', sans-serif;
+    }
+
+
+    .header-menu ul li{
+        margin-top:10px;
+        margin-bottom: 5px;
+        margin-right:50px;
+    }
+
+    .header-menu ul li a.sep{
+        color:#ffffff;
+    }
+
+    .header-menu #menu-icon{
+        display: block;
+        cursor: pointer;
+        margin-top: -20px;
+        margin-left: -60px;
+
+    }
+
+}a.sep{
+    color:#cc4c1d;
+}
+
+a.sep:hover{
+    background-color: #3e5f4d88;
+    padding: 10px 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 4px;
+}
+
+a.first-three{
+    color: #0B4325;
+    font-weight: bold;
+    font-size:20px;
+}
+
+a.first-three:hover{
+    background-color:rgba(206, 116, 74, 0.468);
+    padding: 10px 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 4px;
+}
+
+/*  RECIPE CARDS  */
+
+.recipe_cards {
+    display: flex;
+    justify-content: space-betwecen;
+    align-items: center;
+  }
+
+
+  .card {
+    /* background-image: url(./images/Home.png);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed; */
+    border-top-left-radius: 55px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: 10px;
+    border: 3px #1c451f solid;
+    width: 35%;
+    height: 80%;
+    margin: 2% 60px 2% 5%;
+    text-align: center;
+    box-shadow: rgba(161, 121, 84, 0.35) 0px 5px 15px;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    background-color: #dceddfb8;
+  }
+
+  .c_img {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.4s ease;
+  }
+
+  .c_img:hover{
+    transform: scale(1.2);
+  }
+
+  .last {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .rec_tit {
+    font-size: 20px;
+    font-weight: bold;
+    /* font-family: 'Courier New', Courier, monospace; */
+    color: #cf5e31;
+  }
+
+  .card p{
+    margin-bottom:20px;
+  }
+
+  #btn {
+    background-color: #e5f0e8d3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    width: 25%;
+    margin-bottom: 10%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 10px;
+    color: #0B4325;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bolder;
+  }
+
+  #btn a{
+    color: #296243;
+  }
+
+
+  #btn:hover {
+    background-color: #ffa981;
+    box-shadow: rgba(167, 73, 5, 0.4) 0px 5px, rgba(160, 76, 16, 0.4) 0px 10px, rgba(163, 97, 50, 0.4) 0px 15px, rgba(182, 116, 70, 0.4) 0px 20px, rgba(194, 131, 86, 0.4) 0px 25px;
+  }
+
+  #fav {
+    background-color: #e5f0e8d3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    width: 25%;
+    margin-bottom: 5%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 10px;
+    color: #0B4325;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bolder;
+  }
+
+  #fav a{
+    color: #296243;
+  }
+
+
+  #fav:hover {
+    box-shadow: rgba(167, 73, 5, 0.4) 0px 5px, rgba(160, 76, 16, 0.4) 0px 10px, rgba(163, 97, 50, 0.4) 0px 15px, rgba(182, 116, 70, 0.4) 0px 20px, rgba(194, 131, 86, 0.4) 0px 25px;
+    background-color: #feddd0;
+  }
+
+
+/* LIST */
+
+#list{
+    height: 20vh;
+}
+
+.list{
+    position: absolute;
+    left: 90%;
+    margin-top: 100px;
+}
+
+.number{
+    margin-right: 20px;
+    font-family: 'League Spartan', sans-serif;
+    color: #cc4c1d;
+}
+
+.number a{
+    text-decoration: none;
+    color: #cc4c1d;
+    font-size: 20px;
+}
+
+/* FOOTTER */
+.footter{
+    background-color: rgb(66, 97, 82);
+    height: 50vh;
+}
+
+.info{
+    color: #fff;
+}
+
+.footter h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+    padding-top: 40px;
+    color:rgb(186, 73, 24);
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.footter h2::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: rgb(186, 73, 24);
+    margin: 0 auto;
+    display: block;
+    margin-top:10px;
+}
+
+
+.content-footter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.info{
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info p{
+    text-align: center;
+}
+
+.mini-item{
+    width: 5%;
+    height: 5%;
+    margin-bottom:20px;
+}
+
+/* FOOTTER RESPONSİVE  */
+@media only screen and (max-width:900px){
+    .footter{
+        background-color: rgb(66, 97, 82);
+        height: 70vh;
+    }
+
+    .content-footter{
+        flex-direction: column;
+    }
+
+    .info{
+        margin-top:30px;
+    }
+
+    .info p{
+        width: 100%;
+        text-align: center;
+    }
+}

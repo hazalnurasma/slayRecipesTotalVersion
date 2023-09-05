@@ -1,0 +1,74 @@
+<?php
+
+require_once "connection.php";
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slay Recipes | Recipe API</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" >
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="recipe-api.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header id="navbar">
+        <div class="container">
+            <div class="header-navbar">
+                <img class="logo" src="./images/logo.png">
+                <div class="header-menu">
+                    <ul id="menu-items">
+                        <li class="menu"><a class="first-three" href="recipeCards.html">All Recipes</a></li>
+                        <li class="menu"><a class="first-three" href="recipe-api.html">Recipe API</a></li>
+                        <li class="menu"><a class="sep" href="logout.php">Log Out</a></li>
+                        <!-- <li class="menu"><a class="sep" href="loginRegister.php">Register</a></li> -->
+                    </ul>
+                    <img id="menu-icon" onclick="menuToggle()" src="./images/bar.png">
+                </div>
+            </div>
+    </header>
+
+
+
+    <!-- API -->
+
+    <section id="api">
+        <div class="container-api">
+            <div class="search-container">
+                <input type="text" placeholder="Type A Dish Name Here.." id="user-inp" />
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Script -->
+
+    <script src="recipe-api.js"></script>
+
+    <script>
+        const menuItems = document.getElementById('menu-items');
+        menuItems.style.maxHeight = "0px";
+
+        function menuToggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            } else {
+                menuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

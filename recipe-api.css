@@ -1,0 +1,373 @@
+/* i can use this in the content */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+/* same with my logo */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap'); 
+
+
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p{
+    margin:0;
+    padding:0;
+    outline: none;
+    border: none;
+}
+
+/* NAVBAR */
+
+.logo {
+    width: 15%;
+    height: 15%;
+} 
+
+.container{
+    background-image: url(./images/Home.png);
+    border-radius: 55px;
+    max-width: 1360px; 
+    /* notes by hazal: it changes with your browsers width */
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+
+.header{
+    background-image: url(./images/home.png);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    /* notes by hazal: It is a pesponsive desing. 100vh means pick the browser height. */
+}
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-family: 'League Spartan', sans-serif;
+    /* backdrop-filter: blur(10px);
+    backdrop-filter: brightness(95%);
+    backdrop-filter: drop-shadow(100% 100px 10px blue);
+    border-radius: 30px; */
+}
+
+.header-menu{
+    display: flex;
+}
+
+#menu-items{
+    display: flex; 
+    font-family: 'League Spartan', sans-serif;
+    margin: 15px 25px 15px;
+}
+
+.menu{
+    margin-left: 27px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size:23px;
+    /* padding: 10px 0 10px 0; */
+}
+
+/* MENU ICON */
+
+#menu-icon{
+    width: 6%;
+    height: 6%;
+    display: none;
+    position: absolute;
+    /* right: 0; */
+    margin-left: -50px;
+}
+
+/* MENU RESPONSIVE */
+
+@media only screen and (max-width:800px){
+    .header-menu #menu-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top:100px;
+        left:-24px;
+        background-color: #67936ed3;
+        width: 100%;
+        height: 50%;
+        z-index:1;
+        overflow: hidden;
+        transition: max-height .6s;
+        font-family: 'League Spartan', sans-serif;
+    }
+
+
+    .header-menu #menu-items .menu{
+        margin-top:10px;
+        margin-bottom: 5px;
+        margin-right:50px;
+    }
+
+    .header-menu #menu-items .menu a.sep{
+        color:#ffffff;
+    }
+
+    .header-menu #menu-icon{
+        display: block;
+        cursor: pointer;
+        margin-top: -20px;
+        margin-left: -60px;
+
+    }
+
+}
+
+a.sep{
+    color:#ae3c12;
+}
+
+a.sep:hover{
+    background-color: #3b584288;
+    padding: 10px 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 4px;
+}
+
+a.first-three{
+    color: #344737;
+    font-weight: bold;
+    font-size:20px;
+}
+
+a.first-three:hover{
+    background-color:rgba(191, 128, 77, 0.568);
+    padding: 10px 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 4px;
+}
+
+
+
+/* RECIPE API CSS  */
+
+    .api{
+        width: 100vh;
+    }
+
+    .container-api {
+        background-color: #f19e80b8;
+        font-size: 16px;
+        padding: 3em 2.8em;
+        width: 90vw;
+        max-width: 32em;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        margin-top: 50px;
+        border-top-left-radius: 55px;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 55px;
+        border-bottom-left-radius: 18px;
+        box-shadow: 0 1.2em 2.5em rgba(119, 44, 3, 0.201);
+    }
+
+    .search-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 9fr 3fr;
+        gap: 1.2em;
+    }
+
+    .search-container input{
+        font-size: 1em;
+        padding: 0.6em;
+        border: none;
+        outline: none;
+        color:#1f854f;
+        border-bottom: 3px solid #167a45;
+        border-radius: 20px;
+    }
+
+    .search-container button{
+        font-size: 16px;
+        cursor: pointer;
+        color: #108245;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 4px;
+        border: none;
+        font-weight: bold;
+    }
+
+    .search-container button:hover{
+        background-color: rgba(17, 72, 36, 0.589);
+        color: white;
+        border: none;
+        font-weight: bold;
+
+    }
+
+    .rec-img{
+        display: block;
+        width: 50%;
+        margin: 10% 5% 10% 27%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border: 3px solid #115b34;
+        transition: transform 0.4s ease;
+    }
+
+    .rec-img:hover{ 
+        transform: scale(1.2); 
+    }
+
+    .details{
+        background-color:#3c5e44 ;
+        color:rgb(245, 245, 245);
+        position: relative;
+        margin: -60px 0 0 0;
+        text-align: center;
+        padding: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 4px;
+    }
+    
+    .details h2{
+        font-size: 26px;
+        font-weight: bolder;
+    }
+
+    .details h4{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+
+
+    #show-recipe{
+        font-size: 16px;
+        position: relative;
+        left: 75%;
+        padding: 10px 10px;
+        border:none;
+        outline:none;
+        background-color: #3c5e44;
+        color: white;
+        margin-top: 20px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 4px;
+        cursor: pointer;
+    }
+
+    #show-recipe:hover{
+        background-color: #f7ebe2;
+        color: rgb(33, 69, 41);
+    }
+
+
+
+
+    #recipe{
+        position: absolute;
+        color: white;
+        font-weight: lighter;
+        background-color: #3c5e44;
+        /* add some shadow!!! */
+        min-height: 60%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-radius: 20px;
+        display: none;
+    }
+
+    #recipe pre{
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 8% 10%;
+    }
+    
+    #hide-recipe{
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        border-top-right-radius: 16px;
+        background-color: #d0714e;
+        color: white;
+        position: relative;
+        border:none;
+        padding-top:5px;
+        left: 94.2%;
+    }
+
+    #hide-recipe:hover{
+        background-color: #e8b5a3;
+        color: rgb(59, 89, 70); 
+    }
+
+    ul{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.8em;
+        margin-top: 30px;
+    }
+
+    ul li{
+        font-size: 18px;
+        font-weight: lighter;
+
+    }
+
+    h3{
+        text-align: center;
+        margin-top: 20px;
+        color:#36543a
+    }
+
+
+
+    @media screen and (max-width: 500px) {
+        .container-api {
+          font-size: 14px;
+        }
+    }
+
+

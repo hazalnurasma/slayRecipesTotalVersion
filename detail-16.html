@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Slay Recipes | Recipe Cards</title>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="details.css">
+        <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" >
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <!-- NAVBAR -->
+
+        <header id="navbar">
+            <div class="container">
+                <div class="header-navbar">
+                    <img class="logo" src="./images/logo.png">
+                    <div class="header-menu">
+                        <ul id="menu-items">
+                            <li class="menu"><a class="first-three" href="recipeCards.html">All Recipes</a></li>
+                            <li class="menu"><a class="first-three" href="recipe-api.html">Recipe API</a></li>
+                            <li class="menu"><a class ="sep" href="logout.php">Log Out</a></li>
+                            <!-- <li class="menu"><a class="sep" href="loginRegister.php">Register</a></li> -->
+                        </ul>
+                        <img id="menu-icon" onclick="menuToggle()" src="./images/bar.png">
+                    </div>
+                </div>
+        </header>
+
+        <!-- RECIPE DETAILS -->
+
+        <section id="rec-detail">
+            <div class="rec-container">
+                <h2 class="rec_title">Healthy Spicy Broccoli Recipe</h2>
+                <div class="content_detail2">
+                  <img class="rec_det" src="./forCardsImage/brocoli.jpg">
+                  <div class="table">
+                    <table table-border="2" cellpadding="20">
+                      <thead>
+                        <tr>
+                          <th>Ingredients</th>
+                          <th>How to?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="ing">✭ 2 tbsp toasted sesame oil<br>
+                            ✭ 6 skinless and boneless chicken thighs, sliced<br>
+                            ✭ 2 large garlic cloves, crushed<br>
+                            ✭ 1 thumb-sized piece ginger, grated<br>
+                            ✭ 50g runny honey<br>
+                            ✭ 30ml light soy sauce<br>
+                            ✭ 1 tbsp rice wine vinegar<br>
+                            ✭ 1 tbsp sesame seeds, to serve<br>
+                            ✭ 4 spring onions, shredded, to serve<br>
+                            ✭sticky rice, to serve<br>
+                            ✭ steamed bok choi or spring greens, to serve<br>
+                          </td>
+                          <td class="how_to">
+                            <b>STEP 1</b><br>
+                            Heat the oil in a non-stick pan over a medium heat. Add the chicken and fry for 7 mins, or until
+                            golden. Add the garlic and ginger and fry for 2 mins. Stir in the honey, soy sauce, vinegar and 100ml
+                            water. Bring to the boil and cook for 2 - 5 mins over a medium heat until the chicken is sticky and
+                            coated in a thick sauce.
+          
+                            <br><br><b>STEP 2</b><br>
+                            Scatter over the spring onions and sesame seeds, then serve the chicken with the rice and steamed veg.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <form>
+                      <input id="btn" type="button" value="Return to All Recipes!" onclick="history.back()">
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  FOOTTER  -->
+        
+        <div class="footter">
+            <h2>CONTACT</h2>
+            <div class="content-footter">
+                <div class="info anime-top">
+                    <img src="./images/mail.png" class="mini-item">
+                    <p>asmahazalnur@gmail.com</p>
+                </div>
+                <div class="info anime-bottom">
+                    <img src="./images/phone.png" class="mini-item">
+                    <p>Phone Number: <br><br> +90 578 xxx xxxx</p>
+                </div>
+                <div class="info anime-top">
+                    <img src="./images/location.png" class="mini-item">
+                    <p> Adres:<br><br> Örnek Mahallesi, Örnek Sokak No: 1, Örnek İlçe/Şehir</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.sr = ScrollReveal();
+    
+            sr.reveal('.anime-top', {
+                origin: 'top',
+                duration: 1000,
+                distance: '25rem',
+                delay: 300,
+            })
+    
+            sr.reveal('.anime-bottom', {
+                origin: 'bottom',
+                duration: 1000,
+                distance: '25rem',
+                delay: 300,
+            })
+        </script>
+
+        <script>
+            const menuItems=document.getElementById('menu-items');
+            menuItems.style.maxHeight="0px";
+
+            function menuToggle(){
+                if(menuItems.style.maxHeight=="0px"){
+                   menuItems.style.maxHeight="200px"; 
+                }else{
+                    menuItems.style.maxHeight="0px"
+                }
+            }
+        </script>
+    </body>
+</html>    
